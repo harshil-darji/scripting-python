@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+# Program to set environment variable and use of library os.
+
+# Execute in terminal: STAGE=production ./running.ssh 
+# If STAGE variable is not set before running, by default it is in dev mode.
+
+import os
+
+#stage = os.environ["STAGE"].upper()     #os.environ causes problem if STAGE env variable is not set before running! So, we use getenv()
+
+stage = os.getenv("STAGE", default="dev").upper()
+
+output = f"We're running in {stage}"
+
+if stage.startswith("PROD"):
+    output = "DANGER!! - " + output
+
+print(output)

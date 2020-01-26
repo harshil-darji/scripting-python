@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+# Program to print n digits of PI. By default it prints 10 digits after decimal.
+
+# Execute using: DIGITS=20 ./pi.ssh 
+# Replace DIGITS by a number of your choice!
+
+from os import getenv
+from math import pi
+
+digits = int(getenv("DIGITS") or 10)
+print("%.*f" % (digits,pi))

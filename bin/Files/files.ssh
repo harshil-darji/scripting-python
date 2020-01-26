@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+
+# Program to read and write a file and display contents.
+
+# Uncomment part of the code and run it to read, write or create.
+
+# Execute using: ./files.ssh
+
+
+# ----------------------------- READ A FILE -----------------------------
+
+# xmen_file = open('xmen_base.txt', 'r')
+
+# file_as_string = xmen_file.read()
+# print(f"File using read() : {file_as_string}")
+# xmen_file.seek(0)   # Set cursor to 0, because after reading cursor is at EOF
+
+# # Another way to read file using for loop
+# print("\nFile using loop:")
+# for line in xmen_file:
+#    print(line, end="")
+
+# xmen_file.close()
+
+# ----------------------------- WRITE A FILE -----------------------------
+
+write_data = "This is something that will be written to file."
+
+with open('new_xmen.txt', 'w+') as f:
+	f.write(write_data)
+
+	f.seek(0)
+	read_data = f.read()
+	print("Content written to file: ")
+	print(read_data)

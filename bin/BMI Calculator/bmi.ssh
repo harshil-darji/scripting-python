@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+# Program to calulate BMI index of your body with user inputs.
+
+# Execute in terminal using: ./bmi.ssh
+
 def gather_info():
     height = float(input("What is your height? (inches or meters) "))
     weight = float(input("What is your weight? (pounds or kilos) "))

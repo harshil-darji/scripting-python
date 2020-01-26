@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+# Program to print arguments passed via terminal.
+
+# Execute using: ./param_echo.ssh arg1 arg2 arg3...  (returns empty [] if no arguments passed)
+
+import sys
+
+print(f"First argument: {sys.argv[0]}")      # The file name itself
+
+print(f"All arguments after that, Positional arguments: {sys.argv[1:]}")
