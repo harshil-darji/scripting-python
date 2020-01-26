@@ -1,10 +1,19 @@
 #!/usr/bin/python3
 
+# Program created using argument parser that reads a file in reverse
+
+# Execute using: ./reverse_file.ssh <filename> -l <limit>
+# Filename is a positional argument and is required. Limit is the number of lines
+# to be read and is an optional argument.
+
+# To check the version of the file, -v flag could be passed.
+
+
 import argparse
 import sys
 
-# Build the parser
 
+# Build the parser
 parser = argparse.ArgumentParser(description='Read a file in reverse')
 parser.add_argument('filename', help='the file to read')
 parser.add_argument('--limit','-l', type=int, help='the number of lines to read')

@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+
+import subprocess
+
+# proc = subprocess.run(["ls", "-l"])
+# proc.args - returns arguments passed to subprocess proc
+
+proc = subprocess.run(
+        ['ls','-l'],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,)
+
+print("\nCompleted process - ")   # Returns a CompletedProcess
+print(proc)
+
+print("\nError code of process (0 implies success, else error) - ")   # Returns error code for Process
+print(proc.returncode)
+
+
+print('\n' + "Process stdout (byte object)- ") # Returns a byte object (note b in front)
+print(proc.stdout)
+
+
+# To return a string from the byte object, we need to decode the byte object first. Do that the following way:
+print('\n'+ "Process stdout (decoded object)- ")
+print(proc.stdout.decode())
